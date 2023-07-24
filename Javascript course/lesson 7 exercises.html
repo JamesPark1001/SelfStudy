@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>function exercises</title>
+  </head>
+  <body>
+    <script>
+      //questions 7a-7c
+      function greet(name = 'there!') {
+        console.log(`Hello! ${name}`);
+      }
+
+      // greet();
+
+      function greet1(name) {
+        if (!name) {
+          console.log('Hey there!!!');
+        } else {
+          console.log(`Hello! ${name}`);
+        }
+      }
+
+      // greet1();
+      // greet1('James');
+
+      //questions 7d- 7f
+
+      function convertToFarenheit(celcius) {
+        return (celcius * 9) / 5 + 32;
+      }
+
+      // convertToFarenheit(36.4);
+
+      function convertToCelcius(farenheit) {
+        return ((farenheit - 32) * 5) / 9;
+      }
+
+      // convertToCelcius(98);
+      // convertToFarenheit(36.4);
+
+      function convertTemperature(degree, unit) {
+        if (unit === 'F') {
+          const result = convertToFarenheit(degree);
+          return `'${result}F'`;
+        } else if (unit === 'C') {
+          const result = convertToCelcius(degree);
+          return `'${result}C'`;
+        }
+      }
+
+      console.log(convertTemperature(86, 'C'));
+      console.log(convertTemperature(25, 'F'));
+    </script>
+  </body>
+</html>
